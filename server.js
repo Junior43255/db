@@ -1,4 +1,4 @@
-const jsonServer = require('json-server');
+const {jsonServer} = require('json-server');
 const server = jsonServer.create();
 const router = jsonServer.router('./db.json');
 const middlewares = jsonServer.defaults({
@@ -11,5 +11,5 @@ server.use(jsonServer.rewriter({
 }))
 server.use(router);
 server.listen(PORT, () => {
-  console.log('Server is running');
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
