@@ -11,5 +11,5 @@ server.use(jsonServer.rewriter({
 }))
 server.use(router);
 server.listen(PORT, () => {
-  console.log('Server is running');
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
