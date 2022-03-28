@@ -14,7 +14,7 @@ import { createTheme, makeStyles } from '@material-ui/core/styles';
 import { green, red } from '@material-ui/core/colors'
 
 
-const dataProvider = jsonServerProvider('http://localhost:3004')
+const dataProvider = jsonServerProvider('https://eduplus-admin-demo.herokuapp.com/')
 
 const customTheme = createTheme({
   // ...defaultTheme,
