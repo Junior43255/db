@@ -1,117 +1,68 @@
 {
   "courses": [
     {
-      "instructorId": "1",
-      "id": "1",
-      "title": "learn react",
-      "description": "learn react admin dashboard",
-      "keyword": "react",
-      "categoryId": 5,
-      "suitableCourse": "Lorem ipsum dolor sit amet.",
-      "publishedAt": "2022-03-07",
-      "vimeoLink": "https://vimeo.com/19155490",
-      "coverPhotoLarge": {
-        "rawFile": {
-          "path": "Rectangle 4087.png"
-        },
-        "src": "blob:http://localhost:3000/7a6272b4-7f7e-45d0-823d-466720373788",
-        "title": "Rectangle 4087.png"
-      },
-      "coverPhotoMedium": {
-        "rawFile": {
-          "path": "Rectangle 4086.png"
-        },
-        "src": "blob:http://localhost:3000/c7af9a0d-5ff6-4f50-a3b1-12b83a1422a1",
-        "title": "Rectangle 4086.png"
-      },
-      "file": {
-        "rawFile": {
-          "path": "sample.pdf"
-        },
-        "src": "blob:http://localhost:3000/181baf8c-ead4-40ce-be08-a8df709a97c3",
-        "title": "sample.pdf"
-      },
-      "courseType": false
-    },
-    {
-      "instructorId": "1",
-      "id": "2",
+      "instructorId": 2,
       "title": "learn javascript",
-      "description": "learn javascript and build project",
-      "keyword": "javascript",
-      "categoryId": 1,
-      "suitableCourse": "Lorem ipsum dolor sit amet.",
-      "publishedAt": "2022-03-07",
-      "vimeoLink": "https://vimeo.com/19155490",
+      "description": "learn javascript",
+      "keyword": "learn javascript",
+      "categoryId": 5,
+      "suitableCourse": "ทั่วไป",
+      "courseChapter": [
+        {
+          "title": "บทที่1",
+          "vimeoLink": "https://vimeo.com/19155490",
+          "exerciseFile": {
+            "rawFile": {
+              "path": "sample - Copy.pdf"
+            },
+            "src": "blob:http://localhost:3000/3f108207-8c9b-464c-b8f7-85b9ef5e4b3c",
+            "title": "sample - Copy.pdf"
+          },
+          "courseFile": {
+            "rawFile": {
+              "path": "sample.pdf"
+            },
+            "src": "blob:http://localhost:3000/b88e0ce8-e807-47ea-aa1f-a4909d3874df",
+            "title": "sample.pdf"
+          }
+        },
+        {
+          "title": "บทที่2",
+          "vimeoLink": "https://vimeo.com/19155490",
+          "exerciseFile": {
+            "rawFile": {
+              "path": "sample - Copy.pdf"
+            },
+            "src": "blob:http://localhost:3000/a864fa47-fa31-4c28-a95a-377622264f69",
+            "title": "sample - Copy.pdf"
+          },
+          "courseFile": {
+            "rawFile": {
+              "path": "sample.pdf"
+            },
+            "src": "blob:http://localhost:3000/9057da22-4322-47d4-be3c-a3648c27f57b",
+            "title": "sample.pdf"
+          }
+        }
+      ],
+      "courseType": true,
+      "publishedAt": "2022-04-04",
       "coverPhotoLarge": {
         "rawFile": {
-          "path": "Rectangle 4087.png"
+          "path": "Rectangle 4086.png"
         },
-        "src": "blob:http://localhost:3000/f29125e4-c76f-4ba2-ae4e-e8743a8b07da",
-        "title": "Rectangle 4087.png"
+        "src": "blob:http://localhost:3000/b8c7de05-ddb4-4492-97f5-83ac5f53acd5",
+        "title": "Rectangle 4086.png"
       },
       "coverPhotoMedium": {
         "rawFile": {
           "path": "Rectangle 4086.png"
         },
-        "src": "blob:http://localhost:3000/27d775b3-0a90-4782-adea-4deaf2cda37d",
+        "src": "blob:http://localhost:3000/58dfee88-9774-414a-8348-cceb5829f4e6",
         "title": "Rectangle 4086.png"
       },
-      "file": {
-        "rawFile": {
-          "path": "sample.pdf"
-        },
-        "src": "blob:http://localhost:3000/134dcfd1-73f1-4c5b-9536-5037a06ab915",
-        "title": "sample.pdf"
-      },
-      "courseType": true
-    },
-    {
-      "vimeoLink": null,
-      "publishedAt": "2022-03-18",
-      "categoryId": 5,
-      "description": "Content",
-      "title": "learn UX/UI",
-      "instructorId": "FMosvDf",
-      "keyword": "learn UX/UI",
-      "id": "eI44n6R",
-      "suitableCourse": "Lorem ipsum dolor sit amet.",
-      "coverPhotoLarge": {
-        "rawFile": {
-          "path": "Rectangle 4087.png"
-        },
-        "src": "blob:http://localhost:3000/7355a356-8ddc-48a7-8391-1c4a5ad52fb5",
-        "title": "Rectangle 4087.png"
-      },
-      "coverPhotoMedium": {
-        "rawFile": {
-          "path": "Rectangle 4086.png"
-        },
-        "src": "blob:http://localhost:3000/7a38335e-bf62-40fa-a1b7-97de1a4c9c00",
-        "title": "Rectangle 4086.png"
-      },
-      "file": {
-        "rawFile": {
-          "path": "sample.pdf"
-        },
-        "src": "blob:http://localhost:3000/3c9f6805-0e7f-4a35-ad5e-23460ebab1c3",
-        "title": "sample.pdf"
-      },
-      "courseType": false
-    },
-    {
-      "instructorId": "P7dHZ0H",
-      "title": "learn javascript",
-      "description": "f",
-      "categoryId": 5,
-      "suitableCourse": "Lorem ipsum dolor sit amet.",
-      "publishedAt": "2022-03-31",
       "vimeoLink": "https://vimeo.com/19155490",
-      "keyword": "learn UX/UI",
-      "id": "o_o5_BD",
-      "coverPhotoLarge": null,
-      "coverPhotoMedium": null,
-      "file": null
+      "id": 1
     }
   ],
   "categories": [
@@ -136,57 +87,90 @@
       "category": "Personal Skill"
     },
     {
-      "id": 6,
-      "category": "ภาษา"
+      "category": "สุขภาพ",
+      "id": 6
     },
     {
-      "id": "7",
-      "category": "สุขภาพ"
-    },
-    {
-      "id": "8",
-      "category": "การเงิน การลงทุน"
+      "category": "การเงิน การลงทุน",
+      "id": 7
     }
   ],
   "instructors": [
     {
-      "id": "1",
-      "name": "Junior UTKJN",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis!",
+      "name": "Patakhan",
+      "description": "Lorem ipsum dolor sit amet.",
       "tag": "อาหาร",
       "profilePicture": {
         "rawFile": {
           "path": "Rectangle 4086.png"
         },
-        "src": "blob:http://localhost:3000/b8aaea11-c8a6-491c-890f-b7a56108e3d7",
+        "src": "blob:http://localhost:3000/015bf040-e937-404d-a8be-76270a383374",
         "title": "Rectangle 4086.png"
-      }
+      },
+      "id": 1
     },
     {
-      "name": "PTK UDTAN",
-      "id": "FMosvDf",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis!",
+      "name": "Junior",
       "tag": "สุขภาพ",
+      "description": "Lorem ipsum dolor sit amet.",
       "profilePicture": {
         "rawFile": {
-          "path": "Rectangle 4086.png"
+          "path": "Rectangle 4087.png"
         },
-        "src": "blob:http://localhost:3000/0be8c360-f392-48ce-8d65-d0c20d063d33",
-        "title": "Rectangle 4086.png"
-      }
+        "src": "blob:http://localhost:3000/3ef51918-dad1-4976-a68b-5cdf4eb0e964",
+        "title": "Rectangle 4087.png"
+      },
+      "id": 2
     },
     {
-      "name": "Junior PTK",
-      "id": "P7dHZ0H",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis!",
+      "name": "Udtakhanjana",
+      "description": "Lorem ipsum dolor sit amet.",
       "tag": "ภาษา",
       "profilePicture": {
         "rawFile": {
-          "path": "Rectangle 4086.png"
+          "path": "eduplusIcon.png"
         },
-        "src": "blob:http://localhost:3000/1d7acad1-39ce-444a-9e91-61e0284ad86e",
-        "title": "Rectangle 4086.png"
-      }
+        "src": "blob:http://localhost:3000/183d7cd4-8853-4aad-90e8-500f71162bd2",
+        "title": "eduplusIcon.png"
+      },
+      "id": 3
+    }
+  ],
+  "packages": [
+    {
+      "deviceView": [
+        {
+          "device": "มือถือ"
+        },
+        {
+          "device": "แทบเล็ต"
+        },
+        {
+          "device": "คอมพิวเตอร์"
+        },
+        {
+          "device": "ทีวี"
+        }
+      ],
+      "screenAmount": 1,
+      "quality": "1080p",
+      "price": "279/month",
+      "title": "Basic Package",
+      "id": 1
+    }
+  ],
+  "homeBanners": [
+    {
+      "description": "คอร์สเรียนคุณภาพอยู่ที่ไหนก็เรียนได้กับ Eduplus สมัครเลย มีทั้งรายเดือน / รายปี",
+      "title": "คอร์สออนไลน์แบบบุฟเฟต์",
+      "bg": {
+        "rawFile": {
+          "path": "Rectangle 4092.png"
+        },
+        "src": "blob:http://localhost:3000/3bbeee08-d23f-49a2-a67a-9cff635c45c5",
+        "title": "Rectangle 4092.png"
+      },
+      "id": 1
     }
   ]
 }

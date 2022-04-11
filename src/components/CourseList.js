@@ -28,7 +28,11 @@ import {
     NullableBooleanInput,
     FunctionField,
     UrlField,
-    ChipField
+    ChipField,
+    ArrayInput,
+    SimpleFormIterator,
+    ArrayField,
+    SingleFieldList
 } from 'react-admin'
 
 import Pagination from './Pagination'
@@ -66,7 +70,7 @@ export const CourseList = (props) => {
                     tertiaryText={record => new Date(record.publishedAt).toLocaleDateString()}
                 />
             ) : (
-                <Datagrid>
+                <Datagrid>Lorem ipsum dolor sit amet.
                     <TextField source="id" />
                     <ReferenceField source="instructorId" reference="instructors">
                         <ChipField source="name" />
@@ -95,11 +99,25 @@ export const CourseEdit = props => (
                 <SelectInput source="name" />
             </ReferenceInput>
             <TextInput source="title" validate={required()} />
+            <TextInput label='คอร์สนี้เหมาะกับใคร' multiline source='suitableCourse' validate={required()}/>
+            <TextInput label='สิ่งที่คุณจะได้จากคอร์สนี้' multiline source='willgetCourse' validate={required()} />
             <TextInput label="เนื้อหาสำคัญในบทเรียน" multiline source="description" validate={required()} />
             <TextInput source="keyword" validate={required()} />
-            <ReferenceInput source="categoryId" reference="categories">
+            <ReferenceInput source="categoryId" reference="categories" validate={required()}>
                 <SelectInput optionText="category" />
             </ReferenceInput>
+            <ArrayInput source='courseChapter'>
+                <SimpleFormIterator>
+                    <TextInput label='Title' source='title' />
+                    <TextInput label='Vimeo Link' source='vimeoLink' />
+                    <FileInput label='ไฟล์แบบฝึกหัด' source='exerciseFile'>
+                        <FileField source="src" title="title" />
+                    </FileInput>
+                    <FileInput label='ไฟล์ประกอบการเรียน' source='courseFile' accept="application/pdf">
+                        <FileField source="src" title="title" />
+                    </FileInput>
+                </SimpleFormIterator>
+            </ArrayInput>
             <NullableBooleanInput
                 label="Course Type"
                 source="courseType"
@@ -114,10 +132,7 @@ export const CourseEdit = props => (
             <ImageInput label='Cover 1000x1500' source='coverPhotoMedium' accept="image/*" validate={required()}>
                 <ImageField source='src' title='title' />
             </ImageInput>
-            <TextInput source="vimeoLink" />
-            <FileInput source="file" label="Related file" accept="application/pdf" validate={required()}>
-                <FileField source="src" title="title" />
-            </FileInput>
+            <TextInput source="vimeoLink" validate={required()}/>
         </SimpleForm>
     </Edit>
 )
@@ -125,18 +140,29 @@ export const CourseEdit = props => (
 export const CourseCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <ReferenceInput source="instructorId" reference="instructors">
-                <SelectInput optionText="name" validate={required()} />
+            <ReferenceInput source="instructorId" reference="instructors" validate={required()}>
+                <SelectInput source="name" />
             </ReferenceInput>
-            {/* <ReferenceInput source  ="id" reference="Courses">
-                <TextInput source="name" />
-            </ReferenceInput> */}
             <TextInput source="title" validate={required()} />
+            <TextInput label='คอร์สนี้เหมาะกับใคร' multiline source='suitableCourse' validate={required()} />
+            <TextInput label='สิ่งที่คุณจะได้จากคอร์สนี้' multiline source='willgetCourse' validate={required()} />
             <TextInput label="เนื้อหาสำคัญในบทเรียน" multiline source="description" validate={required()} />
             <TextInput source="keyword" validate={required()} />
-            <ReferenceInput source="categoryId" reference="categories">
-                <SelectInput optionText="category" validate={required()} />
+            <ReferenceInput source="categoryId" reference="categories" validate={required()}>
+                <SelectInput optionText="category" />
             </ReferenceInput>
+            <ArrayInput source='courseChapter'>
+                <SimpleFormIterator>
+                    <TextInput label='Title' source='title' />
+                    <TextInput label='Vimeo Link' source='vimeoLink' />
+                    <FileInput label='ไฟล์แบบฝึกหัด' source='exerciseFile'>
+                        <FileField source="src" title="title" />
+                    </FileInput>
+                    <FileInput label='ไฟล์ประกอบการเรียน' source='courseFile' accept="application/pdf" >
+                        <FileField source="src" title="title" />
+                    </FileInput>
+                </SimpleFormIterator>
+            </ArrayInput>
             <NullableBooleanInput
                 label="Course Type"
                 source="courseType"
@@ -152,9 +178,6 @@ export const CourseCreate = props => (
                 <ImageField source='src' title='title' />
             </ImageInput>
             <TextInput source="vimeoLink" validate={required()} />
-            <FileInput source="file" label="Related file" accept="application/pdf" validate={required()}>
-                <FileField source="src" title="title" />
-            </FileInput>
         </SimpleForm>
     </Create>
 )
@@ -167,18 +190,26 @@ export const CourseShow = (props) => (
                 <TextField source="name" />
             </ReferenceField>
             <TextField source="title" />
-            <TextField source="description" />
+            <TextField label='คอร์สนี้เหมาะกับใคร' source='suitableCourse' />
+            <TextField label='สิ่งที่คุณจะได้จากคอร์สนี้' source="willgetCourse" />
+            <TextField label="เนื้อหาสำคัญในบทเรียน" source="description" />
+            <TextField source='keyword' />
             <ReferenceField source="categoryId" reference="categories">
                 <TextField source="category" />
             </ReferenceField>
-            <TextField source='suitableCourse' />
+            <ArrayField source='courseChapter'>
+                <Datagrid>
+                    <TextField source='title' />
+                    <UrlField source='vimeoLink' />
+                    <FileField label='ไฟล์แบบฝึกหัด' source='exerciseFile.src' title='exerciseFile.title' />
+                    <FileField label='ไฟล์ประกอบการเรียน' source='courseFile.src' title='courseFile.title' />
+                </Datagrid>
+            </ArrayField>
+            <FunctionField label='Free/Member' render={record => record.courseType === false ? 'Free' : 'Member'} />
             <TextField source='publishedAt' />
-            <TextField source='keyword' />
-            <UrlField source='vimeoLink' />
             <ImageField source='coverPhotoLarge.src' title='coverPhotoLarge.title' />
             <ImageField source='coverPhotoMedium.src' title='coverPhotoMedium.title' />
-            <FileField source='file.src' title='file.title' />
-            <FunctionField label='Free/Member' render={record => record.courseType === false ? 'Free' : 'Member'} />
+            <UrlField source='vimeoLink' />
         </SimpleShowLayout>
     </Show>
 );

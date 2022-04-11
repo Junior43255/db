@@ -54,7 +54,6 @@ export const CategoryEdit = props => (
 export const CategoryCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="id" />
             <TextInput source="category" validate={required()}/>
         </SimpleForm>
     </Create>
